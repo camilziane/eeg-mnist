@@ -33,11 +33,11 @@ class VGGish(pl.LightningModule):
             nn.Flatten(),
             nn.Linear(512 * 7 * 1, 4096),  # Adjusted input size based on downsampling
             nn.ReLU(inplace=True),
-            nn.Dropout(0.5),
-            nn.Linear(4096, 4096),
+            nn.Dropout(0.3),
+            nn.Linear(4096, 1024),
             nn.ReLU(inplace=True),
-            nn.Dropout(0.5),
-            nn.Linear(4096, num_classes),  # Output for MNIST (10 classes)
+            nn.Dropout(0.3),
+            nn.Linear(1024, num_classes),  # Output for MNIST (10 classes)
         )
 
         self.criterion = nn.CrossEntropyLoss()
