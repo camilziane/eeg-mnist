@@ -1,4 +1,4 @@
-# reference https://doi.org/ 10.3390/s23239351
+# reference https://doi.org/10.3390/s23239351
 import torch
 import torch.nn as nn
 import pytorch_lightning as pl
