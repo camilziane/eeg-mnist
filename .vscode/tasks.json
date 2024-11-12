@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Stop Jupyter Kernels",
+      "type": "shell",
+      "command": "pkill -9 -f 'ipykernel_launcher'",
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
